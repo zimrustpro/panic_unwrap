@@ -4,6 +4,6 @@ fn main() {
 }
 
 fn get_fourth(input: &Vec<i32>) -> i32 {
-    let fourth = input.get(3).unwrap();
+    let fourth = input.get(3).expect("Input vector needs at least 4 items");
     *fourth
 }

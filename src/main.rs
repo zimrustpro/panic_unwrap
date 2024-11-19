@@ -4,6 +4,12 @@ fn main() {
 }
 
 fn try_two_unwraps(input: Vec<Option<i32>>) {
-    println!("Index 0 is: {}", input[0].unwrap());
-    println!("Index 1 is: {}", input[1].unwrap());
+    println!(
+        "Index 0 is: {}",
+        input[0].expect("The first unwrap had a None!")
+    );
+    println!(
+        "Index 1 is: {}",
+        input[1].expect("The second unwrap had a None!")
+    );
 }

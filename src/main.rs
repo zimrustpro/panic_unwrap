@@ -1,12 +1,9 @@
 fn main() {
-    let my_name = "Blessed Sibanda";
+    let my_vec = vec![9, 0, 10];
+    let _fourth = get_fourth(&my_vec);
+}
 
-    assert!(my_name == "Blessed Sibanda");
-    assert_eq!(my_name, "Blessed Sibanda");
-    assert_ne!(my_name, "John Doe");
-
-    assert_ne!(
-        my_name, "Blessed Sibanda",
-        "You entered {my_name}. Input must not equal Blessed Sibanda"
-    );
+fn get_fourth(input: &Vec<i32>) -> i32 {
+    let fourth = input.get(3).unwrap();
+    *fourth
 }

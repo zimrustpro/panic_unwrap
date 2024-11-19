@@ -1,11 +1,12 @@
 fn main() {
-    let my_vec = vec![8, 9, 10, 10, 55, 99];
-    print_all_three_things(my_vec);
-}
+    let my_name = "Blessed Sibanda";
 
-fn print_all_three_things(vector: Vec<i32>) {
-    if vector.len() != 3 {
-        panic!("vector must always have three items");
-    }
-    println!("{}, {}, {}", vector[0], vector[1], vector[2]);
+    assert!(my_name == "Blessed Sibanda");
+    assert_eq!(my_name, "Blessed Sibanda");
+    assert_ne!(my_name, "John Doe");
+
+    assert_ne!(
+        my_name, "Blessed Sibanda",
+        "You entered {my_name}. Input must not equal Blessed Sibanda"
+    );
 }
